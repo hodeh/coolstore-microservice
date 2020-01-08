@@ -1557,7 +1557,7 @@ objects:
           data-sources:
             ReviewDS:
               driver-name: postgresql
-              connection-url: jdbc:postgresql://inventory-postgresql.coolstore.svc.cluster.local:5432/review
+              connection-url: jdbc:postgresql://review-postgresql:5432/review
               user-name: ${REVIEW_DB_USERNAME}
               password: ${REVIEW_DB_PASSWORD}
 
