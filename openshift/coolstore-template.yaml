@@ -802,7 +802,7 @@ objects:
     labels:
       app: rating
   spec:
-    replicas: 0
+    replicas: 1
     selector:
       deploymentconfig: rating
     strategy:
@@ -910,7 +910,7 @@ objects:
       comp-type: database
     name: rating-mongodb
   spec:
-    replicas: 0
+    replicas: 1
     selector:
       deploymentconfig: rating-mongodb
     strategy:
@@ -1212,7 +1212,7 @@ objects:
   metadata:
     name: pricing
   spec:
-    replicas: 0
+    replicas: 1
     selector:
       deploymentconfig: pricing
     strategy:
@@ -1367,7 +1367,7 @@ objects:
     labels:
       app: review
   spec:
-    replicas: 0
+    replicas: 1
     selector:
       deploymentconfig: review
     strategy:
@@ -1471,7 +1471,7 @@ objects:
       comp-type: database
       app: review
   spec:
-    replicas: 0
+    replicas: 1
     selector:
       deploymentconfig: review-postgresql
     strategy:
@@ -1557,7 +1557,7 @@ objects:
           data-sources:
             ReviewDS:
               driver-name: postgresql
-              connection-url: jdbc:postgresql://review-postgresql:5432/review
+              connection-url: jdbc:postgresql://inventory-postgresql.coolstore.svc.cluster.local:5432/review
               user-name: ${REVIEW_DB_USERNAME}
               password: ${REVIEW_DB_PASSWORD}
 
@@ -1584,7 +1584,7 @@ objects:
       app: netflix
     name: turbine-server
   spec:
-    replicas: 0
+    replicas: 1
     selector:
       deploymentconfig: turbine-server
       component: turbine-server
@@ -1694,7 +1694,7 @@ objects:
       app: netflix
     name: hystrix-dashboard
   spec:
-    replicas: 0
+    replicas: 1
     selector:
       deploymentconfig: hystrix-dashboard
       component: hystrix-dashboard
