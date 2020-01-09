@@ -363,8 +363,6 @@ objects:
             value: ${INVENTORY_DB_PASSWORD}
           - name: DB_DATABASE
             value: inventorydb
-          - name: JAVA_OPTIONS
-            value: -Dswarm.datasources.data-sources.InventoryDS.connection-url=jdbc:postgresql://inventory-postgresql.coolstore.svc.cluster.local:5432                        
           image: inventory
           imagePullPolicy: Always
           lifecycle:
